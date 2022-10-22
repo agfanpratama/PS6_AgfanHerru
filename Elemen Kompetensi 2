@@ -1,0 +1,23 @@
+#Data DirectMarketing.csv
+
+hist(iris$Petal.Length)
+
+hist(iris$Sepal.Width)
+
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+
+d=density(iris$Petal.Length)
+plot(d)
+
+d=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (d)
+
+#Data housprice.csv
+
+data_agfan=read.csv2("C:/Users/Agfan Herru Pratama/Documents/Mata Kuliah/PRAK STATISTIKA/houseprice.csv")
+
+qplot(data_agfan$AmountSpent, data_agfan$Salary)
+
+plot(data_agfan$AmountSpent, data_agfan$Salary)
