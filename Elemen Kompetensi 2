@@ -1,23 +1,24 @@
 #Data DirectMarketing.csv
 
-hist(iris$Petal.Length)
+data_agfan=read.csv2("C:/Users/Agfan Herru Pratama/Documents/Mata Kuliah/PRAK STATISTIKA/DirectMarketing.csv")
 
-hist(iris$Sepal.Width)
+hist(data_agfan$AmountSpent)
 
-hist(iris$Sepal.Width[iris$Species=="setosa"])
+agfan=density(data_agfan$AmountSpent)
 
-hist(iris$Sepal.Width[iris$Species=="versicolor"])
+plot(agfan)
 
-d=density(iris$Petal.Length)
-plot(d)
 
-d=density(iris$Sepal.Width[iris$Species=="versicolor"])
-plot (d)
+#Data houseprice.csv
 
-#Data housprice.csv
+library(ggplot2)
 
-data_agfan=read.csv2("C:/Users/Agfan Herru Pratama/Documents/Mata Kuliah/PRAK STATISTIKA/houseprice.csv")
+data_agfan1=read.csv2("C:/Users/Agfan Herru Pratama/Documents/Mata Kuliah/PRAK STATISTIKA/houseprice.csv")
 
-qplot(data_agfan$AmountSpent, data_agfan$Salary)
+qplot(data_agfan1$SqFt, data_agfan1$Price)
 
-plot(data_agfan$AmountSpent, data_agfan$Salary)
+qplot(data_agfan1$Bedrooms, data_agfan1$Price)
+
+qplot(data_agfan1$Bathrooms, data_agfan1$Price)
+
+qplot(data_agfan1$Offers, data_agfan1$Price)
